@@ -1,0 +1,2 @@
+module ProductService::ProductsHelper
+end

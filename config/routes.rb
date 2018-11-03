@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :product_service do
+    resources :products
+  end
   namespace :member_service do
     resources :members
   end
