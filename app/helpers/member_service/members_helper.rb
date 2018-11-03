@@ -1,0 +1,2 @@
+module MemberService::MembersHelper
+end
