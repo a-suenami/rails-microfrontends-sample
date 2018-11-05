@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin_service do
+    root to: 'root#index'
+  end
   namespace :product_service do
     resources :products
   end

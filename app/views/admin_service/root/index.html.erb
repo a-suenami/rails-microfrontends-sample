@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin</h1>
+
+<hello-tag></hello-tag>
+
+<script>
+class HelloTag extends HTMLElement {
+  static get template() {
+    return `
+      <style>
+        #a {
+          color: #FF0000;
+        }
+      </style>
+      <div id="a">
+        <slot>abc</slot>
+      </divn>
+    `;
+  }
+
+  constructor() {
+    super();
+    this.addEventListener("click", () => {
+      alert(1);
+    });
+
+    // const template = document.querySelector('#hello');
+    // const node = document.importNode(template.content, true);
+    // this.createShadowRoot();
+    // this.shadowRoot.appendChild(node);
+  }
+}
+customElements.define('hello-tag', HelloTag);
+</script>
